@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import MemoContainer from './components/MemoContainer';
+import SideBar from './components/SideBar';
+import MyComponent from './presentationExample/MyComponent'
 
 function App() {
-  const [count, setCount] = useState(0)
+    return
+    /* 1.기본으로 props불러오기
+    <MyComponent name="최상협" age="29" />
+    */
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    /* 2.비구조화 할당기법
+    <MyComponent name="최상협" age="29" />
+    */
+
+     //3.props 값이 없을 경우 디폴트값 설정
+    <MyComponent name="최상협" />
+
 }
 
+
 export default App
+
+
+
+
+
+/* 2025-04-30 메모장프로젝트 베이직 프레임워크
+function App() {
+  const [memos, setMemos] = useState([
+      {
+        title: 'Memo1',
+        content: 'This is memo 1',
+        createdAt: 0, // 생성일시
+        updatedAt: 0, // 수정일시
+      },
+      {
+         title: 'Memo2',
+         content: 'This is memo 1',
+         createdAt: 0, // 생성일시
+         updatedAt: 0, // 수정일시
+      }
+  ])
+
+  return (
+    <SideBar memos={memos}/>
+    <MemoContainer />
+  )
+}
+*/
+
+
