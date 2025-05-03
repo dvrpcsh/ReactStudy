@@ -1,12 +1,34 @@
 React Study Curriculum
 
-4/28 ~ 5/4
+4/28 ~ 5/4 (1주차)
 1.React의 특징과 구조의 이해
  1-1 DOM과 VirtualDOM이란?
  1-2 Node.js와 npm이란?
 
 2.Component의 이해
- 2-1 Props란?
- 2-2 State란?
- 2-3 클래스형 컴포넌트vs함수형 컴포넌트
+ 2-1 클래스형 컴포넌트vs함수형 컴포넌트
+ 2-2 Props란?
+ 2-3 State란?
  2-4 인터넷강의 홈페이지 클론코딩 및 컴포넌트 적용(과제)
+
+5-5 ~ 5/17 --5/10(2주차 휴무)
+3.React Hooks와 LifeCycle
+ 3-0 코드 리뷰
+ 3-1 컴포넌트의 라이프사이클
+ 3-2 useState/ useEffect/ useReducer/ useMemo/ useCallback/ useRef/ 사용자 정의 Hooks
+ 3-3 webStorage의 개념
+ 3-4 메모장 구현 프로젝트(과제)
+
+5/17 ~ 5/24 (3주차)
+4.Router와 Redux 그리고 Recoil에 대한 개념
+ 생략
+
+5/24 ~ 5/31 (4주차)
+5.컴포넌트 성능 최적화 및 서버 사이드 렌더링
+
+
+
+
+
+
+
