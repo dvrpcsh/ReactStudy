@@ -1,16 +1,12 @@
 import React from 'react';
 
-
-/* 1.기본으로 props불러오기
 function MyComponent(props) {
     return (
         <div>
-            안녕하세요 나의 이름은 {props.name}입니다.<br />
-            나이는 {props.age}살 입니다.
+            <h4>=====안녕하세요=====</h4>
         </div>
     )
 }
-*/
 
 /*2.비구조화 할당기법
 function MyComponent({name, age}) {
