@@ -14,10 +14,13 @@ React Study Curriculum
 5-5 ~ 5/17 --5/10(2주차 휴무)
 3.React Hooks와 LifeCycle
  3-0 코드 리뷰
- 3-1 컴포넌트의 라이프사이클
- 3-2 useState/ useEffect/ useReducer/ useMemo/ useCallback/ useRef/ 사용자 정의 Hooks
- 3-3 webStorage의 개념
- 3-4 메모장 구현 프로젝트(과제)
+ 3-1 useState/ useEffect/ useReducer/ useMemo/ useCallback/ useRef/ 사용자 정의 Hooks
+ 3-2 컴포넌트의 라이프사이클
+ 3-3 Form요소 컨트롤(제어/비제어 컴포넌트)
+ 3-4 설문조사 구현 프로젝트(과제)
+--------------------------------
+ 3-5 webStorage의 개념
+ 3-6 메모장 구현 프로젝트(과제)
 
 5/17 ~ 5/24 (3주차)
 4.Router와 Redux 그리고 Recoil에 대한 개념
