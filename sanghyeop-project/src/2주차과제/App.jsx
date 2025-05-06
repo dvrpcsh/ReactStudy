@@ -2,7 +2,7 @@ import { useState } from 'react';
 import TextInput from './components/TextInput';
 import Select from './components/Select';
 
-const contryOptions = [
+const countryOptions = [
     '한국',
     '중국',
     '일본',
@@ -13,7 +13,7 @@ const contryOptions = [
 function App() {
     const [formValue, setFormValue] = useState({
         name: '',
-        contry: '',
+        country: '',
         address: ''
     });
 

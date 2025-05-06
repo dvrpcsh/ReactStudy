@@ -7,3 +7,5 @@ function Select() {
        </select>
     )
 }
+
+export default Select;
