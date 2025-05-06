@@ -1,21 +1,29 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-//import Parent from './Parent.jsx'
-import ParentCallBack from './ParentCallBack.jsx'
-//import LifeCycleDemo from './LifeCycleDemo.jsx'
-//import TimerComponent from './TimerComponent.jsx'
-//import ClickEventListener from './ClickEventListener.jsx'
-//import LayoutVsEffect from './LayoutVsEffect.jsx'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+/** 
+ * For First Study
+*/
+ import Parent from './first_study/Parent.jsx'
+ import NextPage from './first_study/NextPage.jsx'
+//import ParentCallBack from './first_study/ParentCallBack.jsx'
+//import LifeCycleDemo from './first_study/LifeCycleDemo.jsx'
+import TimerComponent from './first_study/TimerComponent.jsx'
+//import ClickEventListener from './first_study/ClickEventListener.jsx'
+//import LayoutVsEffect from './first_study/LayoutVsEffect.jsx'
 
 function App() {
 
   return (
     <>
-      <div>
-          <ParentCallBack></ParentCallBack>
-      </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Parent/>} />
+        <Route path="/TimerComponent" element={<TimerComponent/>} />
+        <Route path="/next" element={<NextPage />} />
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }

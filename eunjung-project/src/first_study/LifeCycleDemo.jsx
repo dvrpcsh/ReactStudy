@@ -5,10 +5,10 @@ export default function LifecycleDemo() {
 
   // 마운트 시 실행 (componentDidMount)
   useEffect(() => {
-    console.log('컴포넌트가 마운트됨');
+    console.log('LifeCycleDemo 컴포넌트가 마운트됨');
 
     return () => {
-      console.log('컴포넌트가 언마운트됨');
+      console.log('LifeCycleDemo 컴포넌트가 언마운트됨');
     };
   }, []);
 
