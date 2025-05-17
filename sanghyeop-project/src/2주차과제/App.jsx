@@ -17,23 +17,53 @@ function App() {
         address: ''
     });
 
+    console.log("name==",formValue);
+
     return(
         <div className="App">
             <div className="form">
                 <div className="form-item">
                     <h1>1.이름이 무엇인가요?</h1>
-                    <TextInput />
+                    <TextInput value={formValue.name} setValue={(value) => {
+                        setFormValue({
+                            ...formValue,
+                            name: value
+                        })
+                    }}/>
                 </div>
                 <div className="form-item">
                     <h1>2.사는 곳은 어디인가요?</h1>
-                    <Select />
+                    <Select
+                      value={formValue.country}
+                      setValue={(value) => {
+                          setFormValue((state) => ({
+                              ...state,
+                              country: value
+                          }))
+                      }} options={countryOptions} />
                 </div>
-                <div className="form-item">
-                    <h1>2-1. 한국 어디에 사나요?</h1>
-                    <TextInput />
-                </div>
+                {formValue.country === '한국' ? (
+                    <div className="form-item">
+                        <h1>2-1. 한국 어디에 사나요?</h1>
+                        <TextInput value={formValue.address} setValue={(value) => {
+                            setFormValue({
+                                ...formValue,
+                                address: value
+                            })
+                        }}/>
+                    </div>
+                ) : null}
                 <div className="button-group">
-                    <button>저장</button>
+                    <button onClick={() => {
+                      alert("저장되었습니다.");
+                      setFormValue({
+                          name: "",
+                          country: "",
+                          address: ""
+                      })
+                    }}
+                    disabled={formValue.name === "" || formValue.country === ""}
+                >저장</button>
                 </div>
             </div>
         </div>
