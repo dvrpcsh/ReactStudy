@@ -25,6 +25,7 @@ function FunctionalComponent() {
 
         /* 이벤트나 객체 자원 할당 해제*/
         return () => {
+
             console.log("useEffect[value] 실행되기 전 실행됨");
         }
     }, [value]);

@@ -3,7 +3,7 @@ import { useState } from 'react';
 function TextInput() {
     const [value, setValue] = useState('');
 
-    console.log('[TextInput] render' value);
+    console.log('[TextInput] render');
 
     return (
         <input

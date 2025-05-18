@@ -1,20 +1,28 @@
-import {useState} from 'react';
-import FunctionalCpnt from './presentationExample/FunctionalComponent';
-import MyComponent from './presentationExample/MyComponent';
+import CheckBox from './controlledComponents/CheckBox';
+import Select from './controlledComponents/Select';
+import TextArea from './controlledComponents/TextArea';
+import TextInput from './controlledComponents/TextInput';
+import UnControlledTextInput from './controlledComponents/UnControlledTextInput';
 
 function App() {
-    const [toggle, setToggle] = useState(true);
-
     return (
-        <>
-            {toggle && <MyComponent />}
-            {toggle || <FunctionalCpnt />}
-            <hr />
-
-            <button
-                onClick={() => setToggle((t) => !t)}
-            > toggle </button>
-        </>
+        <div className = "App">
+            <div>
+                <TextInput />
+            </div>
+            <div>
+                <TextArea />
+            </div>
+            <div>
+                <Select />
+            </div>
+            <div>
+                <CheckBox />
+            </div>
+            <div>
+                <UnControlledTextInput />
+            </div>
+        </div>
     )
 }
 
