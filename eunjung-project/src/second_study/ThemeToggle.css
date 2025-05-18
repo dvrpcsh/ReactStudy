@@ -1,0 +1,34 @@
+/* 기본적으로 body 전체에 적용 */
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 버튼에도 테마에 따라 스타일 차이 주기 */
+#themeButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* light 테마일 때 버튼 */
+body.light #themeButton {
+  background-color: #eeeeee;
+  color: #333;
+}
+
+/* dark 테마일 때 버튼 */
+body.dark #themeButton {
+  background-color: #333;
+  color: #eee;
+}
