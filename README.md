@@ -1,6 +1,10 @@
 # 📡 대규모 분산 알림 서비스 API
 
-## 🧩 개요
+## 1️⃣ 지원자 정보  
+**2595-000050_최상협_서버 개발자**
+
+## 2️⃣ 프로젝트 설명
+### 📌 프로젝트 개요
 
 이 프로젝트는 Kafka, Redis 기반의 MAS(Microservice Agent System) 아키텍처로 구축된 **대규모 트래픽 처리 알림 서비스 API**입니다.  
 즉시 및 예약 알림 등록, 장애 복구, 빠른 조회 응답을 목표로 하며, 1만 TPS 트래픽을 견딜 수 있는 고성능 분산 환경을 구현합니다.
@@ -45,28 +49,12 @@
 - 고객 ID 기반으로 조회
 - 빠른 응답을 위한 인덱싱 및 최적화 구조
 
-## 🧾 실행 방법
+### 🧠 신경써서 구현한 부분
 
-```bash
-./gradlew clean build
-java -jar build/libs/notification-api.jar
-```
-
-필요한 설정:
-
-```yaml
-spring:
-  datasource:
-    url: jdbc:h2:mem:testdb
-    driverClassName: org.h2.Driver
-  redis:
-    host: localhost
-    port: 6379
-  kafka:
-    bootstrap-servers: localhost:9092
-notification:
-  retry-count: 3
-```
+- **WebFlux + Kafka 조합**을 통한 논블로킹 환경 구축
+- **Redis Delay Queue 구조**를 활용한 예약 알림 구현
+- Kafka 장애 시 **재전송을 위한 Retry 로직 구현**
+- SOLID 원칙 적용으로 각 모듈을 역할별로 설계하여 유지보수성과 확장성 확보
 
 ## 📂 디렉토리 구조 예시
 
@@ -85,13 +73,6 @@ src
     └── exception, util  # 공통 예외, 유틸 등
 ```
 
-## 🧪 Swagger 테스트
-
-- Swagger UI: http://localhost:8080/swagger-ui.html  
-- 주요 테스트 API:
-  - `POST /api/notifications` : 알림 등록
-  - `GET /api/notifications?customerId=xxx&page=0&size=10` : 알림 내역 조회
-
 ## ✅ SOLID 설계 원칙 적용
 
 - **단일 책임 원칙**: 서비스 단위 기능 분리
@@ -105,3 +86,39 @@ src
 - Kafka Consumer 장애 복구 자동화
 - Elasticsearch 기반 로그 검색
 - CI/CD 구축 및 Prometheus + Grafana 모니터링
+
+## 3️⃣ 빌드 결과물 Download 링크
+
+- **[👉 다운로드 링크 (예시)](https://example.com/download/notification-api.jar)**  
+※ 실제 jar 파일 경로 또는 배포 링크로 대체해주세요.
+
+---
+
+## ✅ 실행 방법 (참고)
+
+```bash
+./gradlew clean build
+java -jar build/libs/notification-api.jar
+```
+
+설정 예시 (`application.yml`):
+```yaml
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+  redis:
+    host: localhost
+    port: 6379
+  kafka:
+    bootstrap-servers: localhost:9092
+notification:
+  retry-count: 3
+
+## 🧪 Swagger 테스트
+
+- Swagger UI: http://localhost:8080/swagger-ui.html  
+- 주요 테스트 API:
+  - `POST /api/notifications` : 알림 등록
+  - `GET /api/notifications?customerId=xxx&page=0&size=10` : 알림 내역 조회
+```
