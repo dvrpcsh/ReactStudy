@@ -1,0 +1,71 @@
+* {
+  font-size: 22px;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+  background: #ffebe9;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  background: #fff;
+  padding: 20px 35px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 40px -10px #0000007d;
+  min-width: 300px;
+}
+
+.form-item {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.form-item h1 {
+  margin-bottom: 10px;
+  font-size: 0.8em;
+  color: #142663;
+}
+
+.form-item input[type='text'] {
+  padding: 8px 10px;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #666;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.form-item select {
+  padding: 8px 5px;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #666;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.button-group {
+  text-align: center;
+  margin-top: 35px;
+}
+.button-group button {
+  padding: 10px 38px;
+  border: none;
+  border-radius: 100px;
+  background-color: #32478a;
+  color: #fff;
+  font-size: 0.9em;
+}
+.button-group button:disabled {
+  background-color: #56669a87;
+}
