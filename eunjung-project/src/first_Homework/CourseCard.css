@@ -37,7 +37,14 @@ li {
   margin: 0.8rem 0 0.5rem;
 }
 
+.tags {
+  padding: 0;
+}
+
 .types {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   padding: 0;
 }
 
@@ -50,4 +57,8 @@ li {
   color: #5a25fa;
   margin-right: 5px;
   display: inline-block;
+}
+
+.info {
+  text-align: left;
 }
