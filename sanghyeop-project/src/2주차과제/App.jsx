@@ -17,14 +17,16 @@ function App() {
         address: ''
     });
 
-    console.log("name==",formValue);
+    console.log("formValue==",formValue);
 
     return(
         <div className="App">
             <div className="form">
                 <div className="form-item">
                     <h1>1.이름이 무엇인가요?</h1>
-                    <TextInput value={formValue.name} setValue={(value) => {
+                    <TextInput
+                     value={formValue.name}
+                     setValue={(value) => {
                         setFormValue({
                             ...formValue,
                             name: value
