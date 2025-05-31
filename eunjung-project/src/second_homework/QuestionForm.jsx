@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import TextInput from './TextInput';
 import Select from './Select';
+//import './index.css'
 
 const countryOptions = [
     '한국',
@@ -41,13 +42,17 @@ function QuestionForm() {
                         <h1>2.사는 곳은 어디인가요?</h1>
                         <Select name="country" value={formValue.country} countryOptions={countryOptions} onChange={handleChange}/>
                     </div>
-                    <div className="form-item">
-                        <h1>2-1. 한국 어디에 사나요?</h1>
-                        <TextInput name="address" value={formValue.address} onChange={handleChange}/>
-                    </div>
-                    <div className="button-group">
-                        <button type="submit">저장</button>
-                    </div>
+                    {formValue.country !== 'default' && (
+                        <div className="form-item">
+                            <h1>2-1. {formValue.country} 어디에 사나요?</h1>
+                            <TextInput name="address" value={formValue.address} onChange={handleChange}/>
+                        </div>
+                    )}
+                    {formValue.name.trim() !== '' && formValue.country !== 'default' && (
+                            <div className="button-group">
+                                <button type="submit">저장</button>
+                            </div>
+                    )}
                 </div>
             </div>
         </form>
